@@ -19,9 +19,26 @@ div.navbar-header{
 }
 
 .navbar-default .navbar-header .navbar-brand {
-	color: rgba(43,255,255,.7);
+	color: rgba(247,182,112,.7);
 }
 
 
 .navbar-default .nav>li>a, .navbar-default .nav>li>a:focus {
-   	color: rgba(43,255,255,.7);
+   	color: rgba(230,121,65,.7);
+   }
+
+
+#tipsy{
+	  background: linear-gradient(#e67941, #c25f31); /* Standard syntax */
+
+} 
+
+.section-heading{
+	color:#ffffff;
+}
+
+.content-info{
+	color:#ffffff;
+	font-family: "Arial";
+
+}  	
