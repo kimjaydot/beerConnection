@@ -1,5 +1,12 @@
 // Beer Connection External JavaScript File
 
+
+//Editing Image Slider
+
+$('.carousel').carousel({
+  interval: 2000
+})
+
    var config = {
       apiKey: "Whatever API",
       authDomain: "anything.firebaseapp.com",
