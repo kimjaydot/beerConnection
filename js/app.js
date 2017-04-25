@@ -3,9 +3,9 @@
 
 //Editing Image Slider
 
-$('.carousel').carousel({
-  interval: 2000
-})
+// $('.carousel').carousel({
+//   interval: 2000
+// })
 
    var config = {
       apiKey: "Whatever API",
