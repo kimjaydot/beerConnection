@@ -135,7 +135,38 @@
                     <!-- <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a> -->
                     <!--Google Map Goes Here-->
 
-                    <div id="google-map">
+                <script>
+
+                    var map;
+
+                    //Create blank array for many markers
+
+                  function initMap() {
+                    var uluru = {lat: -25.363, lng: 131.044};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 4,
+                      center: uluru
+                    });
+                    var marker = new google.maps.Marker({
+                      position: uluru,
+                      map: map
+                    });
+
+                    var pearland = {lat: 29.575218, lng: -95.368250};
+
+                      var marker = new google.maps.Marker({
+                        position: pearland,
+                        map: map,
+                        animation: google.maps.Animation.DROP,
+                        title: 'Hello World!'
+                         });
+                  }
+                </script>
+                <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXxqVTD1p9fbpPgdGHnWUVkpkIUPZLDcc&callback=initMap">
+                </script>
+
+                 <!--    <div id="google-map">
                     <iframe
                       width="600"
                       height="450"
@@ -143,12 +174,15 @@
                       src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDd5aYgzyCLzQcIhIrqheDIIKyZCJIkp6U
                         &q=Space+Needle,Seattle+WA" allowfullscreen>
                     </iframe>
-                    </div>
+                    </div> -->
+
+                      <h3>Google Maps- Test</h3>
+                         <div id="map"></div>
 
                 </div>
                  <div class="col-lg-8 col-lg-offset-2 text-center">
                    
-                <table class="table">
+                <!-- <table class="table">
                   <thead>
                     <tr class="border1">
                       <th>Places</th>
@@ -162,7 +196,7 @@
                   <tbody id="placesData">
                   </tbody>
                 </table>
-
+ -->
 
 
                    <!--  <h2 class="section-heading">Find Closest Pubs & WIFI</h2>
