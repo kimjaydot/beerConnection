@@ -142,14 +142,17 @@
                     //Create blank array for many markers
 
                   function initMap() {
-                    var uluru = {lat: -25.363, lng: 131.044};
+
+                    var mainTexas = {lat: 29.759237, lng: -95.357553};
                     var map = new google.maps.Map(document.getElementById('map'), {
-                      zoom: 4,
-                      center: uluru
+                      zoom: 10,
+                      center: mainTexas
                     });
                     var marker = new google.maps.Marker({
-                      position: uluru,
+                      position: mainTexas,
                       map: map
+
+
                     });
 
                     var pearland = {lat: 29.575218, lng: -95.368250};
@@ -158,23 +161,56 @@
                         position: pearland,
                         map: map,
                         animation: google.maps.Animation.DROP,
-                        title: 'Hello World!'
+                        title: 'BeerLove!'
+
+        var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the '+
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+         
+            '</div>'+
+            '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+            marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+
+
                          });
+
+
+                      var sanDiego = {lat: 32.767421, lng: -117.174047};
+
+                      var marker = new google.maps.Marker({
+                        position: sanDiego,
+                        map: map,
+                        animation: google.maps.Animation.DROP,
+                        title: 'BeerWIFI Hut!'
+                         });
+
+
+                      var houGalleria = {lat: 29.739745, lng: -95.463434};
+
+                      var marker = new google.maps.Marker({
+                        position: houGalleria,
+                        map: map,
+                        animation: google.maps.Animation.DROP,
+                        title: 'Galleria BeerFest'
+                         });
+
                   }
                 </script>
                 <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXxqVTD1p9fbpPgdGHnWUVkpkIUPZLDcc&callback=initMap">
                 </script>
-
-                 <!--    <div id="google-map">
-                    <iframe
-                      width="600"
-                      height="450"
-                      frameborder="0" style="border:0"
-                      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDd5aYgzyCLzQcIhIrqheDIIKyZCJIkp6U
-                        &q=Space+Needle,Seattle+WA" allowfullscreen>
-                    </iframe>
-                    </div> -->
 
                       <h3>Google Maps- Test</h3>
                          <div id="map"></div>
@@ -182,23 +218,15 @@
                 </div>
                  <div class="col-lg-8 col-lg-offset-2 text-center">
                    
-                <!-- <table class="table">
+                <table class="table">
                   <thead>
                     <tr class="border1">
-                      <th>Places</th>
-                      <th>Rating</th>
-                      <th>Reviews</th>
-                      <th>Info</th>
-                     
+                      <th>Yelp Data Here</th>
                     </tr>
-
                   </thead>
                   <tbody id="placesData">
                   </tbody>
                 </table>
- -->
-
-
                    <!--  <h2 class="section-heading">Find Closest Pubs & WIFI</h2>
                     <hr class="light">
                     <p class="text-faded">In Need of a booze and some quick night studying? We got you!</p> -->
@@ -222,13 +250,9 @@
             <div class="row">
 
            <p class ="content-info"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet, nibh quis vehicula ullamcorper, magna augue consectetur ex, vitae laoreet magna lacus sit amet velit. Donec varius scelerisque lacus quis pharetra. Donec congue, urna in pretium efficitur, dui nibh porttitor nulla, id porttitor elit libero vitae magna. Integer semper, velit in lobortis faucibus, nisi odio fermentum nisi, nec elementum lorem est ac lacus. Aenean in venenatis ligula. Nulla finibus lobortis tincidunt. Mauris sit amet augue urna. Pellentesque iaculis lorem eget auctor rhoncus. Mauris ac neque pellentesque, iaculis augue nec, blandit sem. Phasellus consectetur nisl luctus felis auctor elementum. Aliquam congue dictum nisi, ut blandit nunc vulputate quis.</p>
-
-           <p class ="content-info"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet, nibh quis vehicula ullamcorper, magna augue 
-           consectetur ex, vitae laoreet magna lacus sit amet velit. Donec varius scelerisque lacus quis pharetra. Donec congue, urna in pretium efficitur, dui nibh porttitor nulla, id porttitor elit libero vitae magna. Integer semper, velit in lobortis faucibus, nisi odio fermentum nisi, nec elementum lorem est ac lacus. Aenean in venenatis ligula. Nulla finibus lobortis tincidunt. Mauris sit amet augue urna. Pellentesque iaculis lorem eget auctor rhoncus. Mauris ac neque pellentesque, iaculis augue nec, blandit sem. Phasellus consectetur nisl luctus felis auctor elementum. Aliquam congue dictum nisi, ut blandit nunc vulputate quis.</p>
-
-
-    
-
+           </div>
+           </div>
+           </section>
                <!--  <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
@@ -268,7 +292,11 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">About</h2>
                     <hr class="light">
-                    <p class="text-faded">In Need of a booze and some quick night studying? We got you!</p>
+                     <div>
+                     <p class ="content-info"> HiLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet, nibh quis vehicula ullamcorper, magna augue 
+           consectetur ex, vitae laoreet magna lacus sit amet velit. Donec varius scelerisque lacus quis pharetra. Donec congue, urna in pretium efficitur, dui nibh porttitor nulla, id porttitor elit libero vitae magna. Integer semper, velit in lobortis faucibus, nisi odio fermentum nisi, nec elementum lorem est ac lacus. Aenean in venenatis ligula. Nulla finibus lobortis tincidunt. Mauris sit amet augue urna. Pellentesque iaculis lorem eget auctor rhoncus. Mauris ac neque pellentesque, iaculis augue nec, blandit sem. Phasellus consectetur nisl luctus felis auctor elementum. Aliquam congue dictum nisi, ut blandit nunc vulputate quis.</p>
+           </div>
+           <!-- <p class="text-faded"></p> -->
                     <!-- <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a> -->
                     <!--Google Map Goes Here-->
                 </div>
@@ -276,7 +304,7 @@
         </div>
     </section>
 
-    <section class="no-padding" id="portfolio">
+<!--     <section class="no-padding" id="portfolio">
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
                 <div class="col-lg-4 col-sm-6">
@@ -371,16 +399,16 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <aside class="bg-dark">
+<!--     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Free Download at Start Bootstrap!</h2>
                 <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download Now!</a>
             </div>
         </div>
-    </aside>
+    </aside> -->
 
     <section id="contact">
         <div class="container">
@@ -391,9 +419,6 @@
                     <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non laoreet risus, nec tincidunt sem. Sed vehicula, nulla non gravida laoreet, lectus est gravida orci, nec ultricies leo lectus id magna. Mauris blandit condimentum justo et dictum. Nulla tellus lorem, euismod sagittis dignissim at, aliquam sed risus. Vestibulum et ante magna. Morbi ac viverra eros. Maecenas non orci vestibulum, sodales magna a, rhoncus turpis. Cras sit amet orci vel tellus pretium aliquet.
                     </p>
-                    
-                    <p>Phasellus ultricies aliquam turpis ac posuere. Cras et mi neque. Pellentesque dapibus nisi sit amet arcu placerat eleifend. Nunc a felis fermentum, pretium libero vel, ullamcorper mauris. In mattis dolor nibh, eget sodales lorem venenatis nec. Integer accumsan eu quam vel condimentum. Proin metus dolor, pharetra quis feugiat et, sagittis ac lorem.</p>
-                    
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x sr-contact"></i>
