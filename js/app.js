@@ -6,17 +6,30 @@
 // $('.carousel').carousel({
 //   interval: 2000
 // })
+var userLocation = $('#searchZipCode').val();
+console.log(userLocation);
 
-   var config = {
-      apiKey: "Whatever API",
-      authDomain: "anything.firebaseapp.com",
-      databaseURL: "https://anything.firebaseio.com/",
-      storageBucket: "anything.appspot.com"
-    };
-    firebase.initializeApp(config);
+$.ajax({
+	url: "https://cryptic-cliffs-17021.herokuapp.com/api/"+userLocation,
+	method: "GET",
+	success: function(res) {
+		console.log(res);
+	}
+
+})
+
+
+
+var config = {
+	apiKey: "Whatever API",
+	authDomain: "anything.firebaseapp.com",
+	databaseURL: "https://anything.firebaseio.com/",
+	storageBucket: "anything.appspot.com"
+};
+firebase.initializeApp(config);
 
 
 // Create a variable to reference the database
 
-	var database = firebase.database();
+var database = firebase.database();
 
