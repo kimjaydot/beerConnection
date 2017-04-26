@@ -158,34 +158,24 @@
                         position: pearland,
                         map: map,
                         animation: google.maps.Animation.DROP,
-                        title: 'BeerLove!'
+                        title: 'Yard House'
                         });
 
 
                      var contentString = '<div id="contentMap">'+
               
-                    '<h1 id="headMapText" class="randomMapText">Beer Love</h1>'+
-                    '<div id="bodyContentMap">Free Drinks and unlimited Data!!</div>'+
+                    '<h1 id="headMapText" class="randomMapText">Yard House</h1>'+
+                    '<div id="bodyContentMap">Hip joint for pontent craft brews & studying </div>'+
                     '</div>';
-
-                    // var contentString = '<div id="contentMap">'+
-              
-                    // '<h1 id="firstHeading" class="firstHeading">Beer</h1>'+
-                    // '<div id="bodyContent">Hi Hi Hi</div>'+
-                    // '<p>Hi this is a Test</p>'+
-                    // '</div>'+
-                    // '</div>';
 
                     var infowindow = new google.maps.InfoWindow({
                       content: contentString
 
                     });
 
-
-        
-
                     marker.addListener('click', function() {
                       infowindow.open(map, marker);
+
                     });
 
                       var sanDiego = {lat: 32.767421, lng: -117.174047};
@@ -194,8 +184,24 @@
                         position: sanDiego,
                         map: map,
                         animation: google.maps.Animation.DROP,
-                        title: 'BeerWIFI Hut!'
+                        title: 'San Diego Pub Crawler'
                          });
+
+                      var contentString = '<div id="contentMap">'+
+              
+                    '<h1 id="headMapText" class="randomMapText">San Diego Pub Crawler</h1>'+
+                    '<div id="bodyContentMap"> Classic Beers, Fun and unlimited Data </div>'+
+                    '</div>';
+
+                    var infowindow = new google.maps.InfoWindow({
+                      content: contentString
+
+                    });
+
+                    marker.addListener('click', function() {
+                      infowindow.open(map, marker);
+                      
+                    });
 
 
                       var houGalleria = {lat: 29.739745, lng: -95.463434};
@@ -216,21 +222,24 @@
                 </script>
 
                 <!--Google Places API -->
-<!-- 
+                <!-- 
                 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHT7q2trUoKLt5AYfJwdt0JyOsz_lxmvc&libraries=places"></script> -->
-
-
-
-                
-
-
-                      <h3>Google Maps- Test</h3>
-                         <div id="map"></div>
-
+           
+              <form>
+                <div class="form-group">
+                  <label for="searchZipCode"></label>
+                  <input type="number" class="form-control" id="searchZipCode" placeholder="Enter a Zip Code or Address">
+                  <br />
+                  <button type="submit" id="submitBtn" class="btn btn-default">Submit</button>
+                </div>
+                </div>
+              </form>
+                <div id="map"></div>
+        
                 </div>
                  <div class="col-lg-8 col-lg-offset-2 text-center">
                    
-                <table class="table">
+                <table class="yelpData">
                   <thead>
                     <tr class="border1">
                       <th>Yelp Data Here</th>
