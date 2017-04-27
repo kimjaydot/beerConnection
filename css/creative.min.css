@@ -72,9 +72,9 @@ div.navbar-header{
 
 } 
 
-.section-heading{
+/*.section-heading{
 	color:#ffffff;
-}
+}*/
 
 .content-info{
 	color:#ffffff;
@@ -123,7 +123,8 @@ div.navbar-header{
 	color:#db8953;
  }
 
- navbar-default .navbar-header .navbar-brand:focus, .navbar-default .navbar-header .navbar-brand:hover {
+ navbar-default .navbar-header .navbar-brand:focus, .navbar-default .navbar-header 
+ .navbar-brand:hover {
  	color:#db8953;
  }
 
