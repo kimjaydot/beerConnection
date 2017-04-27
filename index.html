@@ -182,7 +182,7 @@
 
                      var contentString = '<div id="contentMap">'+
               
-                    '<h1 id="headMapText" class="randomMapText">Yard House</h1>'+
+                    '<h1 id="headMapText" class="randomMapText"> Pearland Yard House</h1>'+
                     '<div id="bodyContentMap">Hip joint for pontent craft brews & studying </div>'+
                     '</div>';
 
@@ -205,14 +205,14 @@
                         title: 'San Diego Pub Crawler'
                          });
 
-                      var contentString = '<div id="contentMap">'+
+                    var contentStringTwo = '<div id="contentMap">'+
               
                     '<h1 id="headMapText" class="randomMapText">San Diego Pub Crawler</h1>'+
                     '<div id="bodyContentMap"> Classic Beers, Fun and unlimited Data </div>'+
                     '</div>';
 
                     var infowindow = new google.maps.InfoWindow({
-                      content: contentString
+                      content: contentStringTwo
 
                     });
 
@@ -230,6 +230,22 @@
                         animation: google.maps.Animation.DROP,
                         title: 'Galleria BeerFest'
                          });
+
+                      var contentStringThree = '<div id="contentMap">'+
+              
+                    '<h1 id="headMapText" class="randomMapText">Galleria Beer Club</h1>'+
+                    '<div id="bodyContentMap"> Beers from the 1970 -2000s </div>'+
+                    '</div>';
+
+                    var infowindow = new google.maps.InfoWindow({
+                      content: contentStringThree
+
+                    });
+
+                    marker.addListener('click', function() {
+                      infowindow.open(map, marker);
+                      
+                    });
 
 
                     //Submit button for Zip Code Field
