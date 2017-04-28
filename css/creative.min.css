@@ -131,3 +131,20 @@ div.navbar-header{
 #about{
 	background-color: #db8953;
 }
+
+/*th{
+	color:#fdc38e;
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}*/
+
+.yelpData{
+	background-color: #ffffff;
+	color:#000000;
+	text-align:left;
+	width:600px;
+	padding:20px;
+}
+
+
