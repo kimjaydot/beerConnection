@@ -7,8 +7,13 @@
 //   interval: 2000
 // })
 
-
-
+var mainTexas = {lat: 29.759237, lng: -95.357553};
+var mapArray = [];
+var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 10,
+                      center: mainTexas
+                    });
+                    
 $('#submitBtn').click(function(e){
   e.preventDefault();
   var userLocation = $('#searchZipCode').val();
@@ -32,18 +37,38 @@ $('#submitBtn').click(function(e){
 			            '<li>' + object.businesses[i].price + '</li>' +
 			            '</ul>' +
 			            '</div>';
+
+			            
+			            
+			 mapArray.push({
+			 	long: object.businesses[i].coordinates.longitude,
+			 	lat: object.businesses[i].coordinates.latitude,
+			 	title: object.businesses[i].name
+			 });
+
 			} //for loop
 
+			console.log(mapArray);
+
 			$('#placesData').append(html);
-		
+
+		mapArray.forEach(function(el) {
+			var markerOne = new google.maps.Marker({
+                        position: {lng: el.long, lat: el.lat},
+                        //position: {lat: 59.327, lng: 18.067}
+                        map: map,
+                        animation: google.maps.Animation.DROP,
+                        title: el.title
+                        });
+
+		});
+
 		}//success function
 	}) //ajax call
 
-	
-	
+}); // click
 
-	});
-
+	
 
 
 
