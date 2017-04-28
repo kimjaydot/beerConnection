@@ -34,7 +34,7 @@ $('#submitBtn').click(function(e){
 			            '</tr>';
 			} //for loop
 
-			$('#yelpData').append(html);
+			$('#placesData').append(html);
 		
 		}//success function
 	}) //ajax call
