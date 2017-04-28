@@ -23,15 +23,15 @@ $('#submitBtn').click(function(e){
 			var html = "";
 
 			for (var i = 0; i < object.businesses.length; i++) {
-			    html += '<tr>' +
-			            '<td>'+
-			            '<div>'+object.businesses[i].name+'</div>' +
-			            '<div>'+object.businesses[i].location.display_address.join(', ')+'</div>' +
-			            '<div>'+object.businesses[i].phone + '</div>' +
-			            '<img src=\"' + object.businesses[i].image_url + '\" />' +
-			            '<div>' + object.businesses[i].price + '</div>' +
-			            '</td>' +
-			            '</tr>';
+			    html += '<div class="resultsContainer"; style= "display: flex;">' +
+			            '<img width ="200px" height = "200px" src=\"' + object.businesses[i].image_url + '\" />' +
+			            '<ul style="list-style-type: none;">'+
+			            '<li>'+object.businesses[i].name+'</li>' +
+			            '<li>'+object.businesses[i].location.display_address.join(', ')+'</li>' +
+			            '<li>'+object.businesses[i].display_phone + '</li>' +
+			            '<li>' + object.businesses[i].price + '</li>' +
+			            '</ul>' +
+			            '</div>';
 			} //for loop
 
 			$('#placesData').append(html);
