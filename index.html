@@ -165,14 +165,30 @@
                       zoom: 10,
                       center: mainTexas
                     });
-                    var marker = new google.maps.Marker({
+                    var markerMain = new google.maps.Marker({
                       position: mainTexas,
                       map: map
                     });
 
+                    var contentString = '<div id="contentMap">'+
+              
+                    '<h1 id="headMapText" class="randomMapText"> Houston Beers</h1>'+
+                    '<div id="bodyContentMap"> Get together and have fun with your friends </div>'+
+                    '</div>';
+
+                    var infowindowMain = new google.maps.InfoWindow({
+                      content: contentString
+
+                    });
+
+                    markerMain.addListener('click', function() {
+                      infowindow.open(map, markerMain);
+
+                    });
+                    // Pearland Marker Map
                     var pearland = {lat: 29.575218, lng: -95.368250};
 
-                    var marker = new google.maps.Marker({
+                    var markerOne = new google.maps.Marker({
                         position: pearland,
                         map: map,
                         animation: google.maps.Animation.DROP,
@@ -191,19 +207,19 @@
 
                     });
 
-                    marker.addListener('click', function() {
-                      infowindow.open(map, marker);
+                    markerOne.addListener('click', function() {
+                      infowindow.open(map, markerOne);
 
                     });
 
-                      var sanDiego = {lat: 32.767421, lng: -117.174047};
+                  var sanDiego = {lat: 32.767421, lng: -117.174047};
 
-                      var marker = new google.maps.Marker({
-                        position: sanDiego,
-                        map: map,
-                        animation: google.maps.Animation.DROP,
-                        title: 'San Diego Pub Crawler'
-                         });
+                  var markerTwo = new google.maps.Marker({
+                    position: sanDiego,
+                    map: map,
+                    animation: google.maps.Animation.DROP,
+                    title: 'San Diego Pub Crawler'
+                     });
 
                     var contentStringTwo = '<div id="contentMap">'+
               
@@ -211,40 +227,40 @@
                     '<div id="bodyContentMap"> Classic Beers, Fun and unlimited Data </div>'+
                     '</div>';
 
-                    var infowindow = new google.maps.InfoWindow({
+                    var infowindowTwo = new google.maps.InfoWindow({
                       content: contentStringTwo
 
                     });
 
-                    marker.addListener('click', function() {
-                      infowindow.open(map, marker);
+                    markerTwo.addListener('click', function() {
+                      infowindowTwo.open(map, markerTwo);
                       
                     });
 
+                  //Galleria Marker Pin
+                  var houGalleria = {lat: 29.739745, lng: -95.463434};
 
-                      var houGalleria = {lat: 29.739745, lng: -95.463434};
+                  var markerThree = new google.maps.Marker({
+                    position: houGalleria,
+                    map: map,
+                    animation: google.maps.Animation.DROP,
+                    title: 'Galleria BeerFest'
+                     });
 
-                      var marker = new google.maps.Marker({
-                        position: houGalleria,
-                        map: map,
-                        animation: google.maps.Animation.DROP,
-                        title: 'Galleria BeerFest'
-                         });
+                  var contentStringThree = '<div id="contentMap">'+
+          
+                  '<h1 id="headMapText" class="randomMapText">Galleria Beer Club</h1>'+
+                  '<div id="bodyContentMap"> Beers from the 1970 -2000s </div>'+
+                  '</div>';
 
-                      var contentStringThree = '<div id="contentMap">'+
-              
-                    '<h1 id="headMapText" class="randomMapText">Galleria Beer Club</h1>'+
-                    '<div id="bodyContentMap"> Beers from the 1970 -2000s </div>'+
-                    '</div>';
+                  var infowindowThree = new google.maps.InfoWindow({
+                    content: contentStringThree
 
-                    var infowindow = new google.maps.InfoWindow({
-                      content: contentStringThree
+                  });
 
-                    });
-
-                    marker.addListener('click', function() {
-                      infowindow.open(map, marker);
-                      
+                  markerThree.addListener('click', function() {
+                    infowindowThree.open(map, markerThree);
+            
                     });
 
 
