@@ -72,22 +72,17 @@ div.navbar-header{
 
 } 
 
-/*.section-heading{
-	color:#ffffff;
-}*/
-
 .content-info{
 	color:#ffffff;
 	font-family: "Arial";
 
 }  
 
-  #map {
+  #map{
         width: 100%;
         height: 500px;
         background-color: grey;
-      }
-
+ }
 
  .navbar-default {
  	background-color: white;
@@ -132,19 +127,31 @@ div.navbar-header{
 	background-color: #db8953;
 }
 
-/*th{
-	color:#fdc38e;
-	text-align: center;
-	font-size: 30px;
-	font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-}*/
+.resultsContainer{
+	width:750px;
+	padding:0 auto;
+	margin-bottom:15px;
+	background: linear-gradient(to right, rgba(253,195,142,0), rgba(255,169,92,1));
+}
 
 .yelpData{
-	background-color: #ffffff;
-	color:#000000;
 	text-align:left;
 	width:600px;
 	padding:20px;
+	font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+	font-size: 16px;
+	color: rgba(255,255,255,.7);
+	margin-bottom: 20px;
+}
+
+.yelpData ul{
+	padding:35px;
+}
+
+.yelpData img{
+	margin:10px;
+	border:2px solid #fdc38e;
+	width:350px;
 }
 
 
