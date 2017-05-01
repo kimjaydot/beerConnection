@@ -1,5 +1,4 @@
-# University of Texas Coding Bootcamp 
-# Project: 1 Front End Project With APIs
+# University of Texas Coding Bootcamp Project: 1 Front End Project With APIs
 
 # Developers: 
 - Kim Johnson
